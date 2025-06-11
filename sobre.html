@@ -1,0 +1,132 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre Nós - Help Deck</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="imagens/logo.jpg" alt="Logo Help Deck" />
+      <span>Help Deck</span>
+      <div id="usuario-logado" class="usuario-logado"></div>
+    </div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre Nós</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="contato.html">Contatos</a>
+      <a href="login.html" class="btn-login" id="btn-acesso">Login</a>
+      <a href="#" class="btn-trabalho" id="btn-trabalho">Trabalho</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="sobre-nos">
+      <div class="sobre-container">
+        <div class="sobre-texto">
+          <span class="hashtag">#soluçõesSimples</span>
+          <h2>Conheça a HELP DECK</h2>
+          <p>
+            Facilitamos a vida digital de quem tem dificuldades com tecnologia, oferecendo suporte personalizado e soluções simples. Nossa empresa utiliza do ensino de instrução personalizada para que o usuário consiga se adaptar melhor ao mundo digital. Tutoriais e Práticas serão seus maiores companheiros nessa jornada.
+          </p>
+        </div>
+        <div class="sobre-imagem">
+          <img src="imagens/sobre.jpg" alt="Homem com lâmpada">
+        </div>
+      </div>
+    </section>
+
+    <section class="razoes">
+      <h2>Razões para escolher a Help Deck</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="etiqueta">#um</div>
+          <h3>Ensino a Distância</h3>
+          <p>Nossa plataforma garante para você uma forma de aprendizado rápido e sem que você precise sair de casa.</p>
+        </div>
+        <div class="card">
+          <div class="etiqueta">#dois</div>
+          <h3>Comunidade</h3>
+          <p>Nosso sistema de comunidade permite você se comunicar com outros alunos para o esclarecimento de dúvidas.</p>
+        </div>
+        <div class="card">
+          <div class="etiqueta">#três</div>
+          <h3>Pró-atividade</h3>
+          <p>Nossa equipe sempre se manterá disposta para prestar suporte ao usuário do site.</p>
+        </div>
+      </div>
+      <a href="login.html" class="btn-plano">Iniciar <span>→</span></a>
+    </section>
+
+<section class="nosso-time">
+  <h2>Nosso Time</h2>
+  <p class="subtitulo">Conheça os talentos por trás do Help Deck</p>
+
+  <div class="equipe">
+    <div class="membro">
+      <div class="foto-container">
+        <img src="imagens/FS.jpg" alt="Francisco Saulo" />
+      </div>
+      <h3>Francisco Saulo</h3>
+      <span class="cargo">CEO</span>
+      <p class="sobre">
+        Responsável por liderar toda a empresa, definindo a visão, os objetivos estratégicos e tomando as principais decisões para o crescimento do negócio. Atua como ponte entre os investidores, o mercado e a equipe executiva.
+      </p>
+    </div>
+    <div class="membro">
+      <div class="foto-container">
+        <img src="imagens/MC.jpg" alt="Maria Clara" />
+      </div>
+      <h3>Maria Clara</h3>
+      <span class="cargo">Social Mídia</span>
+      <p class="sobre">
+        Cria e gerencia conteúdos para redes sociais com foco em engajamento, alcance e fortalecimento da marca. Monitora tendências, interage com o público e analisa métricas para ajustar estratégias digitais.
+      </p>
+    </div>
+    <div class="membro">
+      <div class="foto-container">
+        <img src="imagens/CD.jpg" alt="Carlos Daniel" />
+      </div>
+      <h3>Carlos Daniel</h3>
+      <span class="cargo">Administrador de Banco de Dados</span>
+      <p class="sobre">
+        Garante que os bancos de dados funcionem de forma segura, rápida e eficiente. É responsável por realizar backups, otimizar consultas, prevenir falhas e proteger as informações críticas da empresa.
+      </p>
+    </div>
+    <div class="membro">
+      <div class="foto-container">
+        <img src="imagens/LP.jpg" alt="Lucivânia Pereira" />
+      </div>
+      <h3>Lucivânia Pereira</h3>
+      <span class="cargo">Chefe de Marketing</span>
+      <p class="sobre">
+       Coordena todas as ações de marketing da empresa. Desenvolve campanhas, gerencia equipes, analisa o mercado e define estratégias para aumentar a visibilidade, atrair clientes e gerar vendas.
+      </p>
+    </div>
+    <div class="membro">
+      <div class="foto-container">
+        <img src="imagens/JC.jpg" alt="Joel Clécio" />
+      </div>
+      <h3>Joel Clécio</h3>
+      <span class="cargo">Programador Chefe</span>
+      <p class="sobre">
+       Lidera a equipe de desenvolvedores, define padrões de codificação, organiza tarefas técnicas e garante que os sistemas e softwares entregues sejam eficientes, escaláveis e livres de falhas.
+      </p>
+    </div>
+  </div>
+</section>
+  </main>
+  <script>
+    const tipo = localStorage.getItem("usuarioTipo");
+    if (tipo) {
+      const box = document.getElementById("usuario-logado");
+      if (box) {
+      box.innerText = "Logado como: " + tipo.charAt(0).toUpperCase() + tipo.slice(1);
+      }
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

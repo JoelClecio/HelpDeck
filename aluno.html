@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área do Aluno - Help Deck</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="logado">
+  <header>
+    <div class="logo">
+      <img src="imagens/logo.jpg" alt="Logo Help Deck">
+      <span>Help Deck</span>
+      <div id="usuario-logado" class="usuario-logado"></div>
+    </div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre Nós</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="contato.html">Contatos</a>
+      <a href="#" class="btn-trabalho" id="btn-trabalho">Área do Aluno</a>
+      <a href="login.html" class="btn-login" id="btn-acesso">Sair</a>
+    </nav>
+  </header>
+
+  <main class="dashboard-aluno">
+    <aside class="sidebar">
+      <div class="perfil-aluno">
+        <div class="foto-perfil">
+          <img src="imagens/aluno.jpg" alt="Foto do Aluno">
+        </div>
+        <h3>Rodrigo</h3>
+        <p>Nível: Iniciante</p>
+        <a href="mudar.html" class="btn-mudar-perfil">
+          <i class="fas fa-user-edit"></i> Mudar Perfil
+        </a>
+      </div>
+      
+      <nav class="menu-aluno">
+        <ul>
+          <li class="ativo"><a href="#"><i class="fas fa-book"></i> Meus Cursos</a></li>
+          <li><a href="#"><i class="fas fa-list"></i> Catálogo de Cursos</a></li>
+          <li><a href="#"><i class="fas fa-heart"></i> Favoritos</a></li>
+          <li><a href="#"><i class="fas fa-graduation-cap"></i> Tutoriais</a></li>
+          <li><a href="#"><i class="fas fa-video"></i> Video-aulas</a></li>
+          <li><a href="comunidade.html"><i class="fas fa-users"></i> Comunidade</a></li>
+          <li><a href="#"><i class="fas fa-headset"></i> Suporte</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <section class="conteudo-aluno">
+      <div class="cabecalho-conteudo">
+        <h2><i class="fas fa-book"></i> Meus Cursos</h2>
+        <div class="acoes">
+          <button class="btn-filtro"><i class="fas fa-filter"></i> Filtrar</button>
+          <div class="busca">
+            <input type="text" placeholder="Buscar curso...">
+            <button><i class="fas fa-search"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cursos-grid">
+        <div class="curso-card">
+          <div class="curso-imagem" style="background-image: url('imagens/curso1.jpg');">
+            <div class="progresso" style="width: 65%;">65%</div>
+          </div>
+          <div class="curso-info">
+            <h3>Introdução à Tecnologia</h3>
+            <p>Aprenda os conceitos básicos de tecnologia e dispositivos</p>
+            <div class="curso-meta">
+              <span><i class="fas fa-play-circle"></i> 12 aulas</span>
+              <span><i class="fas fa-clock"></i> 8h</span>
+            </div>
+            <a href="#" class="btn-continuar">Continuar <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="curso-card">
+          <div class="curso-imagem" style="background-image: url('imagens/curso2.jpg');">
+            <div class="progresso" style="width: 30%;">30%</div>
+          </div>
+          <div class="curso-info">
+            <h3>Smartphones para Iniciantes</h3>
+            <p>Domine seu smartphone Android ou iOS</p>
+            <div class="curso-meta">
+              <span><i class="fas fa-play-circle"></i> 8 aulas</span>
+              <span><i class="fas fa-clock"></i> 5h</span>
+            </div>
+            <a href="#" class="btn-continuar">Continuar <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="curso-card">
+          <div class="curso-imagem" style="background-image: url('imagens/curso3.jpg');">
+            <div class="progresso novo">Novo</div>
+          </div>
+          <div class="curso-info">
+            <h3>Redes Sociais com Segurança</h3>
+            <p>Use redes sociais com privacidade e segurança</p>
+            <div class="curso-meta">
+              <span><i class="fas fa-play-circle"></i> 10 aulas</span>
+              <span><i class="fas fa-clock"></i> 6h</span>
+            </div>
+            <a href="#" class="btn-comecar">Começar <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

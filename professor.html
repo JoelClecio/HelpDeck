@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área do Professor - Help Deck</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="logado">
+  <header>
+    <div class="logo">
+      <img src="imagens/logo.jpg" alt="Logo Help Deck">
+      <span>Help Deck</span>
+      <div id="usuario-logado" class="usuario-logado"></div>
+    </div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre Nós</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="contato.html">Contatos</a>
+      <a href="#" class="btn-trabalho" id="btn-trabalho">Área do Professor</a>
+      <a href="login.html" class="btn-login" id="btn-acesso">Sair</a>
+    </nav>
+  </header>
+
+  <main class="dashboard-professor">
+    <aside class="sidebar-professor">
+      <div class="perfil-professor">
+        <div class="foto-perfil">
+          <img src="imagens/professor.jpg" alt="Foto do Professor">
+        </div>
+        <h3>Jão Batista</h3>
+        <p>Especialização: Tecnologia Educacional</p>
+        <a href="mudar.html" class="btn-mudar-perfil">
+          <i class="fas fa-user-edit"></i> Mudar Perfil
+        </a>
+      </div>
+      
+      <nav class="menu-professor">
+        <ul>
+          <li class="ativo"><a href="#"><i class="fas fa-video"></i> Publicar Vídeos</a></li>
+          <li><a href="#"><i class="fas fa-plus-circle"></i> Adicionar Curso</a></li>
+          <li><a href="#"><i class="fas fa-users-class"></i> Turmas</a></li>
+          <li><a href="#"><i class="fas fa-headset"></i> Suporte</a></li>
+          <li><a href="#"><i class="fas fa-share-alt"></i> Redes Sociais</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <section class="conteudo-professor">
+      <div class="cabecalho-conteudo">
+        <h2><i class="fas fa-video"></i> Publicar Vídeos</h2>
+        <div class="acoes">
+          <button class="btn-novo-video"><i class="fas fa-plus"></i> Novo Vídeo</button>
+        </div>
+      </div>
+
+      <div class="painel-controle">
+        <div class="card-upload">
+          <div class="icone-upload">
+            <i class="fas fa-cloud-upload-alt"></i>
+          </div>
+          <h3>Envie seu vídeo</h3>
+          <p>Arraste e solte arquivos ou clique para selecionar</p>
+          <input type="file" id="upload-video" accept="video/*" hidden>
+          <label for="upload-video" class="btn-upload">Selecionar Arquivo</label>
+          <div class="formatos-suportados">
+            <span>Formatos suportados: MP4, MOV, AVI</span>
+          </div>
+        </div>
+        <div class="videos-recentes">
+          <h3><i class="fas fa-history"></i> Vídeos Recentes</h3>
+          <div class="lista-videos">
+            <div class="video-item">
+              <div class="miniatura" style="background-image: url('imagens/thumbnail1.jpg');"></div>
+              <div class="info-video">
+                <h4>Introdução à Tecnologia</h4>
+                <p>Publicado: 15/05/2023</p>
+                <div class="acoes-video">
+                  <button class="btn-editar"><i class="fas fa-edit"></i> Editar</button>
+                  <button class="btn-estatisticas"><i class="fas fa-chart-bar"></i> Estatísticas</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="video-item">
+              <div class="miniatura" style="background-image: url('imagens/thumbnail2.jpg');"></div>
+              <div class="info-video">
+                <h4>Configurações Básicas de Smartphone</h4>
+                <p>Publicado: 10/05/2023</p>
+                <div class="acoes-video">
+                  <button class="btn-editar"><i class="fas fa-edit"></i> Editar</button>
+                  <button class="btn-estatisticas"><i class="fas fa-chart-bar"></i> Estatísticas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

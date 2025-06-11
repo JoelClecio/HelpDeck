@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Help Deck</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="imagens/logo.jpg" alt="Logo Help Deck">
+      <span>Help Deck</span>
+      <div id="usuario-logado" class="usuario-logado"></div>
+    </div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre Nós</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="contato.html">Contatos</a>
+      <a href="login.html" class="btn-login" id="btn-acesso">Login</a>
+      <a href="#" class="btn-trabalho" id="btn-trabalho">Trabalho</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="login-section">
+      <div class="login-box">
+        <h2><i class="fas fa-sign-in-alt"></i> Acesse sua conta</h2>
+        <p>Entre com suas credenciais para acessar o sistema</p>
+        
+        <form onsubmit="return simularLogin()">
+          <div class="input-group">
+            <label for="email"><i class="fas fa-envelope"></i> E-mail:</label>
+            <input type="email" id="email" placeholder="seu@email.com" required>
+          </div>
+          
+          <div class="input-group">
+            <label for="senha"><i class="fas fa-lock"></i> Senha:</label>
+            <input type="password" id="senha" placeholder="••••••••" required>
+          </div>
+          
+          <div class="input-group">
+            <label for="tipo"><i class="fas fa-user-tag"></i> Tipo de usuário:</label>
+            <div class="select-wrapper">
+              <select id="tipo" required>
+                <option value="" disabled selected>Selecione seu perfil</option>
+                <option value="aluno"><i class="fas fa-user-graduate"></i> Aluno</option>
+                <option value="professor"><i class="fas fa-chalkboard-teacher"></i> Professor</option>
+              </select>
+              <div class="select-arrow"><i class="fas fa-chevron-down"></i></div>
+            </div>
+          </div>
+          
+          <button type="submit"><i class="fas fa-sign-in-alt"></i> Entrar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Help Deck. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    function simularLogin() {
+      const email = document.getElementById("email").value.trim();
+      const senha = document.getElementById("senha").value.trim();
+      const tipo = document.getElementById("tipo").value;
+      const usuarios = [
+        { email: "aluno@help.com", senha: "1234", tipo: "aluno" },
+        { email: "professor@help.com", senha: "1234", tipo: "professor" }
+      ];
+
+      const usuarioValido = usuarios.find(u => 
+        u.email === email && 
+        u.senha === senha && 
+        u.tipo === tipo
+      );
+
+      if (usuarioValido) {
+        localStorage.setItem("usuarioTipo", usuarioValido.tipo);
+        window.location.href = usuarioValido.tipo + ".html";
+      } else {
+        alert("Credenciais inválidas. Verifique seu e-mail, senha e tipo de usuário.");
+      }
+      return false;
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      const tipoUsuario = localStorage.getItem("usuarioTipo");
+      const btnAcesso = document.getElementById("btn-acesso");
+      const usuarioLogado = document.getElementById("usuario-logado");
+
+      if (tipoUsuario) {
+        usuarioLogado.innerText = tipoUsuario.charAt(0).toUpperCase() + tipoUsuario.slice(1);
+        btnAcesso.textContent = "Sair";
+        btnAcesso.classList.add("sair");
+        btnAcesso.onclick = function(e) {
+          e.preventDefault();
+          localStorage.clear();
+          window.location.href = "login.html";
+        };
+      }
+    });
+  </script>
+  
+</body>
+</html>

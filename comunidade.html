@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comunidade - Help Deck</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="logado">
+  <header>
+    <div class="logo">
+      <img src="imagens/logo.jpg" alt="Logo Help Deck">
+      <span>Help Deck</span>
+      <div id="usuario-logado" class="usuario-logado"></div>
+    </div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre Nós</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="contato.html">Contatos</a>
+      <a href="#" class="btn-trabalho" id="btn-trabalho">Área do Aluno</a>
+      <a href="login.html" class="btn-login" id="btn-acesso">Sair</a>
+    </nav>
+  </header>
+
+  <main class="comunidade-container">
+    <div class="comunidade-sidebar">
+      <div class="comunidade-info">
+        <h2><i class="fas fa-users"></i> Comunidade Help Deck</h2>
+        <p>Conecte-se com outros alunos, compartilhe conhecimentos e tire dúvidas.</p>
+      </div>
+      
+      <div class="comunidade-stats">
+        <div class="stat-item">
+          <i class="fas fa-user-friends"></i>
+          <span>1.245 membros</span>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-comments"></i>
+          <span>568 discussões</span>
+        </div>
+      </div>
+      
+      <button class="btn-nova-postagem">
+        <i class="fas fa-plus"></i> Nova Postagem
+      </button>
+      
+      <div class="comunidade-topicos">
+        <h3>Tópicos populares</h3>
+        <ul>
+          <li><a href="#"><i class="fas fa-mobile-alt"></i> Smartphones</a></li>
+          <li><a href="#"><i class="fas fa-laptop"></i> Computadores</a></li>
+          <li><a href="#"><i class="fas fa-network-wired"></i> Internet</a></li>
+          <li><a href="#"><i class="fas fa-shield-alt"></i> Segurança</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="comunidade-feed">
+      <div class="postagem-form">
+        <div class="postagem-avatar">
+          <img src="imagens/aluno-perfil.jpg" alt="Seu perfil">
+        </div>
+        <div class="postagem-input">
+          <input type="text" placeholder="No que você está pensando?">
+          <div class="postagem-acoes">
+            <button><i class="fas fa-image"></i> Foto</button>
+            <button><i class="fas fa-link"></i> Link</button>
+            <button><i class="fas fa-paperclip"></i> Arquivo</button>
+            <button class="btn-publicar">Publicar</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="postagens">
+        <div class="postagem">
+          <div class="postagem-cabecalho">
+            <div class="postagem-autor">
+              <img src="imagens/avatar1.jpg" alt="Autor">
+              <div>
+                <h4>Carlos Silva</h4>
+                <span>2 horas atrás</span>
+              </div>
+            </div>
+            <div class="postagem-topico">
+              <i class="fas fa-mobile-alt"></i> Smartphones
+            </div>
+          </div>
+          
+          <div class="postagem-conteudo">
+            <p>Alguém sabe como liberar espaço no iPhone? Meu armazenamento está sempre cheio e não sei o que posso deletar com segurança.</p>
+          </div>
+          
+          <div class="postagem-interacoes">
+            <button class="btn-like"><i class="far fa-thumbs-up"></i> 24</button>
+            <button class="btn-comentar"><i class="far fa-comment"></i> 8 comentários</button>
+            <button class="btn-compartilhar"><i class="fas fa-share"></i> Compartilhar</button>
+          </div>
+          
+          <div class="comentarios">
+            <div class="comentario">
+              <img src="imagens/avatar2.jpg" alt="Comentário">
+              <div>
+                <h5>Maria Oliveira</h5>
+                <p>Você pode ir em Ajustes > Geral > Armazenamento do iPhone. Lá mostra o que está ocupando mais espaço.</p>
+                <div class="comentario-acoes">
+                  <span>Curtir</span> · <span>Responder</span> · <span>2h</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="postagem">
+          <div class="postagem-cabecalho">
+            <div class="postagem-autor">
+              <img src="imagens/avatar3.jpg" alt="Autor">
+              <div>
+                <h4>João Santos</h4>
+                <span>5 horas atrás</span>
+              </div>
+            </div>
+            <div class="postagem-topico">
+              <i class="fas fa-laptop"></i> Computadores
+            </div>
+          </div>
+          
+          <div class="postagem-conteudo">
+            <p>Compartilhando um tutorial que achei super útil para configurar dois monitores no Windows 10:</p>
+            <div class="postagem-link">
+              <img src="imagens/tutorial-thumb.jpg" alt="Tutorial">
+              <div>
+                <h5>Como configurar múltiplos monitores no Windows 10</h5>
+                <span>www.techtudo.com.br/tutorial-windows</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="postagem-interacoes">
+            <button class="btn-like"><i class="far fa-thumbs-up"></i> 42</button>
+            <button class="btn-comentar"><i class="far fa-comment"></i> 15 comentários</button>
+            <button class="btn-compartilhar"><i class="fas fa-share"></i> Compartilhar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="comunidade-lateral">
+      <div class="card-destaque">
+        <h3><i class="fas fa-trophy"></i> Destaques da Semana</h3>
+        <div class="destaque-item">
+          <img src="imagens/avatar4.jpg" alt="Destaque">
+          <div>
+            <h5>Ana Costa</h5>
+            <p>Mais ativa na comunidade</p>
+            <span>18 posts · 56 curtidas</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card-eventos">
+        <h3><i class="fas fa-calendar-alt"></i> Próximos Eventos</h3>
+        <div class="evento-item">
+          <div class="evento-data">
+            <span>15</span>
+            <span>JUN</span>
+          </div>
+          <div class="evento-info">
+            <h5>Live: Dúvidas sobre Android</h5>
+            <span>18:00 · Online</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
